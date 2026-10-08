@@ -1,8 +1,10 @@
 @keyframes float {
+
     0%,
     100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-15px);
     }
@@ -70,10 +72,97 @@ main p {
     letter-spacing: 2px;
 }
 
+.pagina-inicial {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.pagina-inicial main {
+    flex: 1;
+}
+
+.meu-footer {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 16px;
+    align-items: center;
+    margin-top: 24px;
+    padding: 14px 24px;
+    background-color: #180020;
+    border-top: 2px solid #7B3FF2;
+    color: #B3EBF2;
+    letter-spacing: 0.5px;
+}
+
+.footer-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-links {
+    grid-column: 2;
+    align-items: center;
+    flex-direction: row;
+    gap: 14px;
+}
+
+.footer-contato {
+    grid-column: 3;
+    align-items: flex-end;
+}
+
+.footer-titulo,
+.meu-footer a {
+    margin: 0;
+    color: #F7B970;
+    font-family: 'Great Vibes', cursive;
+}
+
+.footer-titulo {
+    font-size: 24px;
+}
+
+.meu-footer a {
+    width: fit-content;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.meu-footer a:hover,
+.meu-footer a:focus-visible {
+    color: #B3EBF2;
+    text-decoration: underline;
+}
+
+.meu-footer small {
+    font-size: 12px;
+}
+
 @media (max-width: 768px) {
+    .meu-footer {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 14px 20px;
+    }
+
+    .footer-links {
+        grid-column: 1;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .footer-contato {
+        grid-column: 1;
+        align-items: flex-start;
+    }
+
     header img {
         margin: 65px 0 0 60px;
     }
+
     p {
         width: 648px;
     }
@@ -83,13 +172,16 @@ main p {
     header img {
         margin: 32px 0 0 16px;
     }
+
     h1 {
         font-size: 40px;
     }
+
     p {
         font-size: 20px;
         width: 340px;
     }
+
     section img {
         width: 340px;
         height: 230px;
