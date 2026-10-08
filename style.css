@@ -69,3 +69,29 @@ main p {
     color: #B3EBF2;
     letter-spacing: 2px;
 }
+
+@media (max-width: 768px) {
+    header img {
+        margin: 65px 0 0 60px;
+    }
+    p {
+        width: 648px;
+    }
+}
+
+@media (max-width: 375px) {
+    header img {
+        margin: 32px 0 0 16px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 20px;
+        width: 340px;
+    }
+    section img {
+        width: 340px;
+        height: 230px;
+    }
+}
